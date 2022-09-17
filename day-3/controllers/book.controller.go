@@ -66,6 +66,8 @@ func(c *BookController)  CreateBooks(e echo.Context) error  {
 	var book models.Book
 	err := e.Bind(&book)
 
+	err = e.Validate(book)
+
 	fmt.Println(err)
 	if err != nil {
 		fmt.Println(err)

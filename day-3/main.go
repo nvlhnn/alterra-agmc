@@ -20,6 +20,7 @@ func main() {
 	e.Debug = true
 
 	middlewares.Log(e)
+	middlewares.AssignValidator(e)
 	routes.InitRoute(e, db)
 	
 	e.Logger.Fatal(e.Start(":8080"))
