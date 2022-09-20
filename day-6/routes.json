@@ -1,0 +1,42 @@
+[
+  {
+    "method": "GET",
+    "path": "/v1/books",
+    "name": "alterra-agmc/day-6/internal/app/book.(*handler).Get-fm"
+  },
+  {
+    "method": "GET",
+    "path": "/status",
+    "name": "alterra-agmc/day-6/internal/http.NewHttp.func1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/users",
+    "name": "alterra-agmc/day-6/internal/app/user.(*handler).Get-fm"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/users/:id",
+    "name": "alterra-agmc/day-6/internal/app/user.(*handler).GetUser-fm"
+  },
+  {
+    "method": "PUT",
+    "path": "/v1/users/:id",
+    "name": "alterra-agmc/day-6/internal/app/user.(*handler).UpdateUser-fm"
+  },
+  {
+    "method": "DELETE",
+    "path": "/v1/users/:id",
+    "name": "alterra-agmc/day-6/internal/app/user.(*handler).DeleteUser-fm"
+  },
+  {
+    "method": "POST",
+    "path": "/v1/auth/login",
+    "name": "alterra-agmc/day-6/internal/app/auth.(*handler).Login-fm"
+  },
+  {
+    "method": "POST",
+    "path": "/v1/auth/register",
+    "name": "alterra-agmc/day-6/internal/app/auth.(*handler).Register-fm"
+  }
+]
