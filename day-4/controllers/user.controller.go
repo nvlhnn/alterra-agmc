@@ -41,35 +41,35 @@ func (c *UserController) GetUsers(e echo.Context) error {
 	})
 }
 
-func (c *UserController) GetUserById(e echo.Context) error {
+	func (c *UserController) GetUserById(e echo.Context) error {
 
-	id := e.Param("id")
-	uintId, _ := strconv.Atoi(id)
+		id := e.Param("id")
+		uintId, _ := strconv.Atoi(id)
 
-	user, err := c.database.GetById(uint(uintId))
+		user, err := c.database.GetById(uint(uintId))
 
-	if err != nil {
-		return e.JSON(http.StatusInternalServerError, map[string]interface{}{
-			"status": false,
-			"message": "Internal server error",
-			"data":   nil,
+		if err != nil {
+			return e.JSON(http.StatusInternalServerError, map[string]interface{}{
+				"status": false,
+				"message": "Internal server error",
+				"data":   nil,
+			})
+		}
+
+		if reflect.ValueOf(user).IsZero() {
+			return e.JSON(http.StatusNotFound, map[string]interface{}{
+				"status": false,
+				"message": "User not found",
+				"data":   nil,
+			})
+		}
+
+		return e.JSON(http.StatusOK, map[string]interface{}{
+			"status": true,
+			"message": nil,
+			"data":   user,
 		})
 	}
-
-	if reflect.ValueOf(user).IsZero() {
-		return e.JSON(http.StatusNotFound, map[string]interface{}{
-			"status": false,
-			"message": "User not found",
-			"data":   nil,
-		})
-	}
-
-	return e.JSON(http.StatusOK, map[string]interface{}{
-		"status": true,
-		"message": nil,
-		"data":   user,
-	})
-}
 
 
 func(c *UserController)  CreateUser(e echo.Context) error  {
