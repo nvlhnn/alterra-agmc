@@ -14,8 +14,10 @@ import (
 
 // load env configuration
 func init() {
-	if err := godotenv.Load(); err != nil {
-		panic(err)
+	if os.Getenv("APP_ENV") != "production" {
+		if err := godotenv.Load(); err != nil {
+			panic(err)
+		}
 	}
 }
 

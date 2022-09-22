@@ -1,5 +1,10 @@
 [
   {
+    "method": "GET",
+    "path": "/v1/users/:id",
+    "name": "alterra-agmc/day-6/internal/app/user.(*handler).GetUser-fm"
+  },
+  {
     "method": "PUT",
     "path": "/v1/users/:id",
     "name": "alterra-agmc/day-6/internal/app/user.(*handler).UpdateUser-fm"
@@ -33,10 +38,5 @@
     "method": "GET",
     "path": "/v1/users",
     "name": "alterra-agmc/day-6/internal/app/user.(*handler).Get-fm"
-  },
-  {
-    "method": "GET",
-    "path": "/v1/users/:id",
-    "name": "alterra-agmc/day-6/internal/app/user.(*handler).GetUser-fm"
   }
 ]
