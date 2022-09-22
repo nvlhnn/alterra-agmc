@@ -22,7 +22,7 @@ func CreateConnectionPostgre(dbConfig DatabaseConfigSQL) (*gorm.DB, error) {
 
 	ssl := "require"
 	
-	if utils.GoDotEnvVariable("APP_ENV") != "development" {
+	if utils.GoDotEnvVariable("APP_ENV") != "production" {
 		ssl = "disable"
 		
 	}
